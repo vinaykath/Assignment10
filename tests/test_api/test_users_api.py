@@ -19,6 +19,7 @@ async def test_create_user_access_denied(async_client, user_token, email_service
     }
     # Send a POST request to create a user
     response = await async_client.post("/users/", json=user_data, headers=headers)
+    log(response)
     # Asserts
     assert response.status_code == 403
 
