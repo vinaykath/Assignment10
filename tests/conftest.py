@@ -262,3 +262,9 @@ def user_response_data():
 @pytest.fixture
 def login_request_data():
     return {"email": "john_doe_123@gmail.com", "password": "SecurePassword123!"}
+
+
+
+@pytest.fixture
+def user_token():
+    return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lQGV4YW1wbGUuY29tIiwicm9sZSI6IkFVVEhFTlRJQ0FURUQiLCJleHAiOjE2MjQzMzQ5ODR9.ZGNjNjI2ZjI4MmYzNTk0MjVjNDk0ZjI4MjdjNGEzNmI1"
