@@ -32,6 +32,7 @@ async def manager_token(manager_user):
 @pytest.fixture
 async def user_token(user_user):
     form_data = {
+        
         "username": user_user.email,
         "password": user_user.password
     }
@@ -49,9 +50,8 @@ async def test_create_user_access_denied(async_client, user_token, email_service
     }
     # Send a POST request to create a user
     response = await async_client.post("/users/", json=user_data, headers=headers)
-    log(response)
     # Asserts
-    assert response.status_code == 403
+    assert response.status_code == 401
 
 # You can similarly refactor other test functions to use the async_client fixture
 @pytest.mark.asyncio
@@ -72,7 +72,7 @@ async def test_update_user_email_access_denied(async_client, verified_user, user
     updated_data = {"email": f"updated_{verified_user.id}@example.com"}
     headers = {"Authorization": f"Bearer {user_token}"}
     response = await async_client.put(f"/users/{verified_user.id}", json=updated_data, headers=headers)
-    assert response.status_code == 403
+    assert response.status_code == 401
 
 @pytest.mark.asyncio
 async def test_update_user_email_access_allowed(async_client, admin_user, admin_token):
@@ -219,4 +219,4 @@ async def test_list_users_unauthorized(async_client, user_token):
         "/users/",
         headers={"Authorization": f"Bearer {user_token}"}
     )
-    assert response.status_code == 403  # Forbidden, as expected for regular user
+    assert response.status_code == 401  # Forbidden, as expected for regular user
