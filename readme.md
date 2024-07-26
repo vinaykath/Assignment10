@@ -2,11 +2,11 @@
 ### Event Manager Company: Software QA Analyst/Developer Onboarding Assignment
 
 ### Documentation of 5 Resolved Errors
-1. [Change Schema to fix the issue](./https://github.com/vinaykath/Assignment10/issues/1)
-2. [Update Error Codes for Specific Tests](./https://github.com/vinaykath/Assignment10/issues/2)
-3. [Enable Role Assignment During User Registration in /register Route ](./https://github.com/vinaykath/Assignment10/issues/3)
-4. [Update login_request_data Parameter to Use 'User' Instead of 'Email](./https://github.com/vinaykath/Assignment10/issues/4)
-5. [Update user_api Test Cases to Return Correct Response for Assertions ](./https://github.com/vinaykath/Assignment10/issues/5)
+1. [Change Schema to fix the issue](https://github.com/vinaykath/Assignment10/issues/1)
+2. [Update Error Codes for Specific Tests](https://github.com/vinaykath/Assignment10/issues/2)
+3. [Enable Role Assignment During User Registration in /register Route ](https://github.com/vinaykath/Assignment10/issues/3)
+4. [Update login_request_data Parameter to Use 'User' Instead of 'Email](https://github.com/vinaykath/Assignment10/issues/4)
+5. [Update user_api Test Cases to Return Correct Response for Assertions ](https://github.com/vinaykath/Assignment10/issues/5)
 
 ### Installation Instructions
 Follow these steps to set up the project on your local machine:
