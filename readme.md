@@ -8,11 +8,6 @@
 4. [Update login_request_data Parameter to Use 'User' Instead of 'Email](./https://github.com/vinaykath/Assignment10/issues/4)
 5. [Update user_api Test Cases to Return Correct Response for Assertions ](./https://github.com/vinaykath/Assignment10/issues/5)
 
-### Resolved the issue demonstrated in the instructor video
-- Updated name field......
-
-### Test coverage above 90% 
-
 ### Installation Instructions
 Follow these steps to set up the project on your local machine:
 
