@@ -24,21 +24,17 @@ Follow these steps to set up the project on your local machine:
     ```sh
     pip install -r requirements.txt
     ```
-4. Create the qr_codes Directory
-    ```sh
-    mkdir qr_codes
-    ```
-5. Run Tests Locally
+4. Run Tests Locally
     ```sh
     pytest
     ```
-6. Start Docker
+5. Start Docker
 
-7. Start the App with Docker Compose
+6. Start the App with Docker Compose
     ```sh
     docker-compose up --build
     ```
-8. View OpenAPI Spec Documentation
+7. View OpenAPI Spec Documentation
     ```sh
     Go to http://localhost/docs to view the OpenAPI specification documentation.
     ```
