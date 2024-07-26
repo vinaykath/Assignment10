@@ -6,7 +6,37 @@ from app.models.user_model import User
 from app.utils.nickname_gen import generate_nickname
 from app.utils.security import hash_password
 from app.services.jwt_service import decode_token  # Import your FastAPI app
+from tests.conftest import async_client  # Import your FastAPI app
 
+@pytest.fixture
+async def admin_token(admin_user):
+    form_data = {
+        "username": admin_user.email,
+        "password": admin_user.password
+    }
+    response = await async_client.post("/login/", data=urlencode(form_data), headers={"Content-Type": "application/x-www-form-urlencoded"})
+    return response.access_token
+
+
+
+@pytest.fixture
+async def manager_token(manager_user):
+    form_data = {
+        "username": manager_user.email,
+        "password": manager_user.password
+    }
+    response = await async_client.post("/login/", data=urlencode(form_data), headers={"Content-Type": "application/x-www-form-urlencoded"})
+    return response.access_token
+
+
+@pytest.fixture
+async def user_token(user_user):
+    form_data = {
+        "username": user_user.email,
+        "password": user_user.password
+    }
+    response = await async_client.post("/login/", data=urlencode(form_data), headers={"Content-Type": "application/x-www-form-urlencoded"})
+    return response.access_token
 # Example of a test function using the async_client fixture
 @pytest.mark.asyncio
 async def test_create_user_access_denied(async_client, user_token, email_service):
