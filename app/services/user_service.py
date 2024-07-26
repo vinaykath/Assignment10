@@ -52,6 +52,15 @@ class UserService:
     @classmethod
     async def create(cls, session: AsyncSession, user_data: Dict[str, str], email_service: EmailService) -> Optional[User]:
         try:
+            print(user_data)
+            # if(user_data.role == "admin" or user_data.role == "ADMIN"):
+            #     new_user.role = UserRole.ADMIN
+            # elif(user_data.role == "authenticated" or user_data.role == "AUTHENTICATED"):
+            #     new_user.role = UserRole.ANONYMOUS
+            # elif(user_data.role == "manager" or user_data.role == "MANAGER"):
+            #     new_user.role = UserRole.ANONYMOUS
+            # else:
+            #     new_user.role = UserRole.ANONYMOUS
             validated_data = UserCreate(**user_data).model_dump()
             existing_user = await cls.get_by_email(session, validated_data['email'])
             if existing_user:
