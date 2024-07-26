@@ -263,7 +263,10 @@ def user_response_data():
 
 @pytest.fixture
 def login_request_data():
-    return {"email": "john_doe_123@gmail.com", "password": "SecurePassword123!"}
+    return {
+        "email": "john_doe_123@gmail.com", 
+        "password": "SecurePassword123!"
+        }
 
 
 
