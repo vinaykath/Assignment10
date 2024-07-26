@@ -250,6 +250,8 @@ def user_update_data():
 @pytest.fixture
 def user_response_data():
     return {
+        
+
         "id": uuid.uuid4(),
         "username": "testuser",
         "email": "test@example.com",
